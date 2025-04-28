@@ -69,5 +69,15 @@ namespace EasyNote.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
+        internal static byte[] HomePNG {
+            get {
+                object obj = ResourceManager.GetObject("HomePNG", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

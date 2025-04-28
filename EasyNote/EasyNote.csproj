@@ -10,10 +10,12 @@
 
   <ItemGroup>
     <None Remove="Resources\EasyNoteLogo.ico" />
+    <None Remove="Resources\HomePNG.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\EasyNoteLogo.ico" />
+    <Resource Include="Resources\HomePNG.png" />
   </ItemGroup>
 
   <ItemGroup>

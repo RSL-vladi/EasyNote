@@ -7,10 +7,33 @@
         mc:Ignorable="d"
         Title="EasyNote" Height="450" Width="800" Background="#282828"
         Icon="Resources/EasyNoteLogo.ico">
-    
 
     <Grid>
-        <DockPanel Background="#383838" Width="240" HorizontalAlignment="Left"/>
+        <DockPanel Background="#383838" Width="240" HorizontalAlignment="Left" LastChildFill="False">
+            <Button Width="220" Height="50" Margin="10,20,10,0" DockPanel.Dock="Top" Background="Transparent" BorderThickness="0" Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="btnBorder" Background="Transparent" CornerRadius="10">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="pack://application:,,,/Resources/HomePNG.png" Width="30" Height="30" Margin="10"/>
+                                <TextBlock Text="Home" FontSize="16" Foreground="#FFFFFF" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="btnBorder" Property="Background" Value="#484848"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="btnBorder" Property="Background" Value="#585858"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="btnBorder" Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </DockPanel>
     </Grid>
 </Window>
 
