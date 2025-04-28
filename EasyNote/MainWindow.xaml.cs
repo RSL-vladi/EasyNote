@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,6 +9,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EasyNote.Properties; 
+
 
 namespace EasyNote
 {
@@ -19,6 +22,15 @@ namespace EasyNote
         public MainWindow()
         {
             InitializeComponent();
+
+            ICON();
+        }
+        private void ICON()
+        {
+            Uri iconUri = new Uri("pack://application:,,,/Resources/EasyNoteLogo.ico", UriKind.Absolute);
+            var bitmap = new BitmapImage(iconUri);
+
+            this.Icon = bitmap;
         }
     }
 }
