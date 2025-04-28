@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyNote"
         mc:Ignorable="d"
-        Title="EasyNote" Height="450" Width="800" Background="White" >
-    <Window.Icon>
-        <ImageSource>C:\Users\krige\OneDrive\Desktop\ProjectArbeit EasyNote\EasyNote\EasyNote\Logo\EasyNoteLogo.png</ImageSource>
-    </Window.Icon>
-
+        Title="EasyNote" Height="450" Width="800" Background="White"
+        Icon="Resources/EasyNoteLogo.ico">
+    
     <Grid>
 
     </Grid>
 </Window>
+
