@@ -122,4 +122,8 @@
     <value>..\Resources\EasyNoteLogo.ico;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     <comment>Logo</comment>
   </data>
+  <data name="HomePNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HomePNG.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <comment>HomeImage</comment>
+  </data>
 </root>
