@@ -5,11 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyNote"
         mc:Ignorable="d"
-        Title="EasyNote" Height="450" Width="800" Background="White"
+        Title="EasyNote" Height="450" Width="800" Background="#282828"
         Icon="Resources/EasyNoteLogo.ico">
     
-    <Grid>
 
+    <Grid>
+        <DockPanel Background="#383838" Width="240" HorizontalAlignment="Left"/>
     </Grid>
 </Window>
+
+
+
+
+
+
+
 
