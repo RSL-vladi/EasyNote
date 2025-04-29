@@ -9,13 +9,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Category.png" />
+    <None Remove="Resources\Delete.png" />
     <None Remove="Resources\EasyNoteLogo.ico" />
-    <None Remove="Resources\HomePNG.png" />
+    <None Remove="Resources\Edit.png" />
+    <None Remove="Resources\Home.png" />
+    <None Remove="Resources\Info.png" />
+    <None Remove="Resources\NewNote.png" />
+    <None Remove="Resources\Note.png" />
+    <None Remove="Resources\Save.png" />
+    <None Remove="Resources\Search.png" />
+    <None Remove="Resources\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Category.png" />
+    <Resource Include="Resources\Delete.png" />
     <Resource Include="Resources\EasyNoteLogo.ico" />
-    <Resource Include="Resources\HomePNG.png" />
+    <Resource Include="Resources\Edit.png" />
+    <Resource Include="Resources\Home.png" />
+    <Resource Include="Resources\Info.png" />
+    <Resource Include="Resources\NewNote.png" />
+    <Resource Include="Resources\Note.png" />
+    <Resource Include="Resources\Save.png" />
+    <Resource Include="Resources\Search.png" />
+    <Resource Include="Resources\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
