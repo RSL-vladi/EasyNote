@@ -118,10 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Category" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Category.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    <comment>NewCategory</comment>
-  </data>
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     <comment>Delete</comment>
@@ -141,6 +137,10 @@
   <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Info.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     <comment>Info</comment>
+  </data>
+  <data name="NewCategory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewCategory.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <comment>NewCategory</comment>
   </data>
   <data name="NewNote" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewNote.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
