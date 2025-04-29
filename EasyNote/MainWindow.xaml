@@ -134,7 +134,7 @@
                         </Button.Template>
                     </Button>
                 </StackPanel>
-                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0">
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0" Panel.ZIndex="-7" AllowDrop="True" RenderTransformOrigin="0.5,0.5">
                     <ScrollViewer.Resources>
                         <Style TargetType="ScrollBar">
                             <Setter Property="SnapsToDevicePixels" Value="True"/>
@@ -144,7 +144,7 @@
                                 <Setter.Value>
                                     <ControlTemplate TargetType="ScrollBar">
                                         <Grid Background="Transparent">
-                                            <Track Name="PART_Track">
+                                            <Track Name="PART_Track" IsDirectionReversed="True">
                                                 <Track.DecreaseRepeatButton>
                                                     <RepeatButton Style="{x:Null}" Height="0" IsTabStop="False"/>
                                                 </Track.DecreaseRepeatButton>
@@ -177,7 +177,7 @@
                             <Setter Property="Width" Value="8"/>
                         </Style>
                     </ScrollViewer.Resources>
-                    <StackPanel x:Name="CategoryPanel"/>
+                    <StackPanel x:Name="CategoryPanel" Orientation="Vertical" VerticalAlignment="Top" />
                 </ScrollViewer>
             </Grid>
         </DockPanel>
