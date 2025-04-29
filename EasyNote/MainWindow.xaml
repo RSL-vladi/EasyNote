@@ -118,7 +118,7 @@
                             <ControlTemplate TargetType="Button">
                                 <Border x:Name="btnBorder" Background="Transparent" CornerRadius="10">
                                     <StackPanel Orientation="Horizontal">
-                                        <Image Source="pack://application:,,,/Resources/Category.png" Width="17" Height="18" Margin="15,0,0,0"/>
+                                        <Image Source="pack://application:,,,/Resources/NewCategory.png" Width="17" Height="18" Margin="15,0,0,0"/>
                                         <TextBlock Text="New Category" FontSize="14" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
                                     </StackPanel>
                                 </Border>
