@@ -153,8 +153,8 @@
                                                         <Thumb.Template>
                                                             <ControlTemplate TargetType="Thumb">
                                                                 <Border x:Name="thumbBorder"
-                                                                        Background="#66FFFFFF"
-                                                                        BorderBrush="#88FFFFFF"
+                                                                        Background="#666666"
+                                                                        BorderBrush="#666666"
                                                                         BorderThickness="1"
                                                                         CornerRadius="4"/>
                                                                 <ControlTemplate.Triggers>
