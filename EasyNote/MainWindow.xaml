@@ -118,8 +118,8 @@
                             <ControlTemplate TargetType="Button">
                                 <Border x:Name="btnBorder" Background="Transparent" CornerRadius="10">
                                     <StackPanel Orientation="Horizontal">
-                                        <Image Source="pack://application:,,,/Resources/Plus.png" Width="20" Height="20"/>
-                                        <TextBlock Text="+ New Category" FontSize="14" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                                        <Image Source="pack://application:,,,/Resources/Category.png" Width="17" Height="18" Margin="15,0,0,0"/>
+                                        <TextBlock Text="New Category" FontSize="14" Foreground="White" VerticalAlignment="Center" Margin="5,0,0,0"/>
                                     </StackPanel>
                                 </Border>
                                 <ControlTemplate.Triggers>
@@ -177,9 +177,11 @@
                             <Setter Property="Width" Value="8"/>
                         </Style>
                     </ScrollViewer.Resources>
-                    <StackPanel x:Name="CategoryPanel" Orientation="Vertical" VerticalAlignment="Top" />
+                    <StackPanel x:Name="CategoryPanel" Orientation="Vertical" VerticalAlignment="Top" Margin="25,0,0,0" />
                 </ScrollViewer>
             </Grid>
+        </DockPanel>
+        <DockPanel Background="Transparent" Width="555" HorizontalAlignment="Left" Margin="245,0,0,0">
         </DockPanel>
     </Grid>
 </Window>
