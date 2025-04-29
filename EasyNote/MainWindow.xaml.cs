@@ -32,5 +32,20 @@ namespace EasyNote
 
             this.Icon = bitmap;
         }
+            private int _categoryCounter = 1;
+
+        private void AddCategoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            var newCategory = new TextBlock
+            {
+                Text = $"Kategorie {_categoryCounter++}",
+                FontSize = 14,
+                Foreground = Brushes.White,
+                Margin = new Thickness(5),
+                Cursor = Cursors.Hand
+            };
+
+            CategoryPanel.Children.Add(newCategory);
+        }
     }
 }
