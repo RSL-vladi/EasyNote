@@ -63,16 +63,6 @@ namespace EasyNote.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
         /// </summary>
-        internal static byte[] Category {
-            get {
-                object obj = ResourceManager.GetObject("Category", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
-        /// </summary>
         internal static byte[] Delete {
             get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
@@ -116,6 +106,16 @@ namespace EasyNote.Properties {
         internal static byte[] Info {
             get {
                 object obj = ResourceManager.GetObject("Info", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
+        internal static byte[] NewCategory {
+            get {
+                object obj = ResourceManager.GetObject("NewCategory", resourceCulture);
                 return ((byte[])(obj));
             }
         }
