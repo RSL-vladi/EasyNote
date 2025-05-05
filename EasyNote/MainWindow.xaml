@@ -181,7 +181,8 @@
                 </ScrollViewer>
             </Grid>
         </DockPanel>
-        <DockPanel Background="Transparent" Width="555" HorizontalAlignment="Left" Margin="245,0,0,0">
+        <DockPanel Background="Transparent" Width="560" HorizontalAlignment="Left" Margin="240,0,0,0">
+            <TextBlock Text="Welcome to EasyNote!" FontSize="24" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"/>
         </DockPanel>
     </Grid>
 </Window>

@@ -27,7 +27,7 @@ namespace EasyNote
         }
         private void ICON()
         {
-            Uri iconUri = new Uri("pack://application:,,,/Resources/EasyNoteLogo.ico", UriKind.Absolute);
+            Uri iconUri = new("pack://application:,,,/Resources/EasyNoteLogo.ico", UriKind.Absolute);
             var bitmap = new BitmapImage(iconUri);
 
             this.Icon = bitmap;
