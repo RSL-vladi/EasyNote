@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Category.png" />
+    <None Remove="Resources\Cross.png" />
     <None Remove="Resources\Delete.png" />
     <None Remove="Resources\EasyNoteLogo.ico" />
     <None Remove="Resources\Edit.png" />
@@ -23,6 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Category.png" />
+    <Resource Include="Resources\Cross.png" />
     <Resource Include="Resources\Delete.png" />
     <Resource Include="Resources\EasyNoteLogo.ico" />
     <Resource Include="Resources\Edit.png" />
