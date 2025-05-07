@@ -71,7 +71,7 @@ namespace EasyNote
 
             var textBoxBorder = new Border
             {
-                CornerRadius = new CornerRadius(10, 10, 10, 0),
+                CornerRadius = new CornerRadius(10, 10, 10, 10),
                 Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#383838")),
                 Child = contentBox,
                 Margin = new Thickness(0)
@@ -92,7 +92,8 @@ namespace EasyNote
             var headerGrid = new Grid
             {
                 Width = 180,
-                Height = 30
+                Height = 30,
+                VerticalAlignment = VerticalAlignment.Center
             };
             headerGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             headerGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
@@ -114,12 +115,12 @@ namespace EasyNote
                 Background = Brushes.Transparent,
                 BorderBrush = Brushes.Transparent,
                 Padding = new Thickness(0),
-                Margin = new Thickness(0),
+                Margin = new Thickness(5, 0, 10, 0),
                 Focusable = false,
                 Cursor = Cursors.Hand,
                 Template = new ControlTemplate(typeof(Button))
                 {
-                    VisualTree = new FrameworkElementFactory(typeof(Image), "img")
+                    VisualTree = CreateImageTemplate()
                 }
             };
 
@@ -129,9 +130,6 @@ namespace EasyNote
             if (presenter != null)
             {
                 presenter.Source = image;
-                presenter.Stretch = Stretch.Uniform;
-                presenter.Width = 20;
-                presenter.Height = 20;
             }
 
             closeBtn.Click += (s, ev) =>
@@ -160,11 +158,10 @@ namespace EasyNote
 
             var headerBorder = new Border
             {
-                Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#383838")),
-                BorderThickness = new Thickness(2.5),
-                BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#383838")),
-                CornerRadius = new CornerRadius(10, 10, 10, 0),
-                Child = headerGrid
+                Background = Brushes.Transparent,
+                BorderThickness = new Thickness(1),
+                Child = headerGrid,
+                Padding = new Thickness(0),
             };
 
             tab.Header = headerBorder;
@@ -177,6 +174,24 @@ namespace EasyNote
             DeleteButton.Visibility = Visibility.Visible;
         }
 
+        private static FrameworkElementFactory CreateImageTemplate()
+        {
+            var grid = new FrameworkElementFactory(typeof(Grid));
+
+            var imageFactory = new FrameworkElementFactory(typeof(Image))
+            {
+                Name = "img"
+            };
+            imageFactory.SetValue(Image.WidthProperty, 20.0);
+            imageFactory.SetValue(Image.HeightProperty, 20.0);
+            imageFactory.SetValue(Image.StretchProperty, Stretch.Uniform);
+            imageFactory.SetValue(Image.HorizontalAlignmentProperty, HorizontalAlignment.Center); 
+            imageFactory.SetValue(Image.VerticalAlignmentProperty, VerticalAlignment.Center);
+            imageFactory.SetValue(FrameworkElement.MarginProperty, new Thickness(0)); 
+
+            grid.AppendChild(imageFactory);
+            return grid;
+        }
         private void SaveNoteButton_Click(object sender, RoutedEventArgs e)
         {
             if (NoteTabControl.SelectedItem is TabItem tab &&

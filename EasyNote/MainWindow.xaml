@@ -152,11 +152,7 @@
                                                     <Thumb>
                                                         <Thumb.Template>
                                                             <ControlTemplate TargetType="Thumb">
-                                                                <Border x:Name="thumbBorder"
-                                                                        Background="#666666"
-                                                                        BorderBrush="#666666"
-                                                                        BorderThickness="1"
-                                                                        CornerRadius="4"/>
+                                                                <Border x:Name="thumbBorder" Background="Transparent" BorderBrush="#999" BorderThickness="1"  CornerRadius="4"/>
                                                                 <ControlTemplate.Triggers>
                                                                     <Trigger Property="IsMouseOver" Value="True">
                                                                         <Setter TargetName="thumbBorder" Property="Background" Value="#AAFFFFFF"/>
@@ -203,7 +199,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Width="150" Height="35" Background="Transparent" BorderThickness="0" Cursor="Hand" Margin="5" Click="SaveNoteButton_Click" Visibility="Collapsed" x:Name="SaveButton">
+                <Button x:Name="SaveButton" Width="150" Height="35" Background="Transparent" BorderThickness="0" Cursor="Hand" Margin="5" Click="SaveNoteButton_Click" Visibility="Collapsed">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="btnBorder" Background="Transparent" CornerRadius="10">
@@ -212,10 +208,18 @@
                                     <TextBlock Text="Speichern" FontSize="16" Foreground="White" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="btnBorder" Property="Background" Value="#484848"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="btnBorder" Property="Background" Value="#585858"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Width="150" Height="35" Background="Transparent" BorderThickness="0" Cursor="Hand" Margin="5" Click="DeleteNoteButton_Click" Visibility="Collapsed" x:Name="DeleteButton">
+                <Button x:Name="DeleteButton" Width="150" Height="35" Background="Transparent" BorderThickness="0" Cursor="Hand" Margin="5" Click="DeleteNoteButton_Click" Visibility="Collapsed">
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="btnBorder" Background="Transparent" CornerRadius="10">
@@ -224,25 +228,50 @@
                                     <TextBlock Text="Löschen" FontSize="16" Foreground="White" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="btnBorder" Property="Background" Value="#484848"/>
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="btnBorder" Property="Background" Value="#585858"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
             </StackPanel>
-            <TabControl x:Name="NoteTabControl" SelectionChanged="NoteTabControl_SelectionChanged" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White">
+            <TabControl x:Name="NoteTabControl" SelectionChanged="NoteTabControl_SelectionChanged" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="White" Margin="10,0,10,0" >
+                <TabControl.Template>
+                    <ControlTemplate TargetType="TabControl">
+                        <DockPanel>
+                            <local:DynamicTapPanel x:Name="HeaderPanel" Panel.ZIndex="1"  Background="Transparent"  IsItemsHost="True" DockPanel.Dock="Top" HorizontalAlignment="Left" />
+                            <ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="0"/>
+                        </DockPanel>
+                    </ControlTemplate>
+                </TabControl.Template>
                 <TabControl.Resources>
                     <Style TargetType="TabItem">
                         <Setter Property="Foreground" Value="White"/>
-                        <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="BorderBrush" Value="Transparent"/>
                         <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Width" Value="180"/>
+                        <Setter Property="Height" Value="30"/>
                         <Setter Property="Padding" Value="0"/>
-                        <Setter Property="Margin" Value="0,0,5,0"/>
+                        <Setter Property="Margin" Value="0"/>
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="TabItem">
-                                    <Border x:Name="TabBorder" Background="Transparent" BorderBrush="Transparent"  SnapsToDevicePixels="True">
+                                    <Border x:Name="TabBorder" BorderThickness="2.5" CornerRadius="10,10,10,0" Background="Transparent" BorderBrush="#484848" SnapsToDevicePixels="True" >
                                         <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header"/>
                                     </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="TabBorder" Property="Background" Value="#585858"/>
+                                            <Setter TargetName="TabBorder" Property="BorderBrush" Value="#AAAAAA"/>
+                                        </Trigger>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="TabBorder" Property="Background" Value="#484848"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
                                 </ControlTemplate>
                             </Setter.Value>
                         </Setter>
@@ -263,7 +292,7 @@
                                                 <Thumb>
                                                     <Thumb.Template>
                                                         <ControlTemplate TargetType="Thumb">
-                                                            <Border x:Name="thumbBorder" Background="Transparent" BorderBrush="#666666" BorderThickness="1" CornerRadius="4"/>
+                                                            <Border x:Name="thumbBorder" Background="#383838" BorderBrush="#999" BorderThickness="1" CornerRadius="4"/>
                                                             <ControlTemplate.Triggers>
                                                                 <Trigger Property="IsMouseOver" Value="True">
                                                                     <Setter TargetName="thumbBorder" Property="Background" Value="#AAFFFFFF"/>
