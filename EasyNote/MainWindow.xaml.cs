@@ -225,7 +225,7 @@ namespace EasyNote
         }
         private void NoteTabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (NoteTabControl.SelectedItem is TabItem)
+            if (NoteTabControl.Items.Count > 0)
             {
                 SaveButton.Visibility = Visibility.Visible;
                 DeleteButton.Visibility = Visibility.Visible;
